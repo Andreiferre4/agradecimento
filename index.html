@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agradecimento pela Compra</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="agradecimento-container">
+        <div class="agradecimento-box">
+            <h1>Obrigado pela sua compra!</h1>
+            <p>Sua compra foi realizada com sucesso.</p>
+            <p>Você receberá um e-mail de confirmação com os detalhes do pedido em breve.</p>
+            <div class="detalhes-pedido">
+                <h3>Detalhes do Pedido:</h3>
+                <ul>
+                    <li><strong>Número do Pedido:</strong> <span id="numero-pedido"></span></li>
+                    <li><strong>Data:</strong> <span id="data-pedido"></span></li>
+                    <li><strong>Total:</strong> <span id="total-pedido"></span></li>
+                </ul>
+            </div>
+            <button onclick="voltarHome()">Voltar para a Home</button>
+        </div>
+    </div>
+
+    <script>
+        // Simulando dados do pedido (em um cenário real, isso viria de um servidor ou da finalização de compra)
+        const numeroPedido = "#123456";
+        const dataPedido = new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+        const totalPedido = "R$ 300,00";
+
+        // Inserindo os dados na página dinamicamente
+        document.getElementById("numero-pedido").innerText = numeroPedido;
+        document.getElementById("data-pedido").innerText = dataPedido;
+        document.getElementById("total-pedido").innerText = totalPedido;
+
+        // Função para redirecionar o usuário de volta à página inicial
+        function voltarHome() {
+            window.location.href = 'index.html'; // Redireciona para a página inicial
+        }
+    </script>
+</body>
+</html>
